@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,400;0,500;0,700;1,400&family=Montserrat&display=swap')
+
+*
+    padding: 0
+    margin: 0
+    list-style: none
+    text-decoration: none
+
+$fontMain: 'Asap', sans-serif
+$fontAwesome: 'Font Awesome 5 Free'
+$textColorHero: #4d4d4d
+$sectionColorWhite: #fff
+$sectionColorGrey: #f6f6f6
+
+@mixin text($font, $fsz, $lh, $fw, $color)
+    font-family: $font
+    font-size: $fsz
+    line-height: $lh
+    font-weight: $fw
+    color: $color
+
+%btn
+    padding: 0 55px 
+    border-radius: 0            
+
+%btn-primary
+    @include text($fontMain, 16px, 50px, 500, $textColorHero)
+    border: 1px solid $textColorHero
+    background-color: transparent
+    text-transform: uppercase
+    &:hover
+        background-color: #fff
+        border: 1px solid #fff
+        box-shadow: 0px 0px 20px -5px rgba(0,0,0,0.75);
+        transition: 0.5s
+
+.navbar-default
+    background-color: transparent
+    border: none
+
+.navbar-collapse
+    border: none
+
+.navbar-brand
+    padding-top: 30px
+   
+
+.nav.navbar-nav.navbar-right
+    li
+        a
+            padding-top: 30px
+            @include text($fontMain, 16px, 16px, 400, $textColorHero)
+            text-transform: uppercase
+            &::after
+                content: ""
+                margin-top: 8px
+                display: block
+                width: 0%
+                height: 2px
+                background-color: #878787
+            &:hover
+                &::after
+                    width: 100%
+                    transition: 0.5s
+
+.owl-carousel
+    padding: 80px 75px 110px 120px
+    border: 1px solid #253142
+.owl-nav
+    display: none
+.owl-dots
+    position: absolute
+    bottom: 37px
+    left: 50%
+    transform: translateX(-50%)
+    display: flex
+    align-self: center
+    justify-content: space-between
+    .owl-dot
+        outline: none!important
+        span
+            display: inline-block
+            margin-right: 4px
+            height: 13px
+            width: 13px
+            background-color: transparent
+            border: 1px solid #253142
+    .owl-dot.active
+        span
+            border: 1px solid black
+            background-color: black
+
+
+.hero
+    height: 100vh
+    background: url(../img/hero-bg_01.jpg) center center  no-repeat
+    background-size: 100% 100%
+    position: relative
+    .wrapper
+        position: absolute
+        top: 25vh
+    &__title
+        @include text($fontMain, 90px, 90px, 500, $textColorHero)
+        margin: 0
+    &__description
+        margin: 0 0 30px 0
+        @include text($fontMain, 22px, 22px, 500, $textColorHero)
+        opacity: 0.15
+    .btn
+        @extend %btn          
+
+    .btn-primary
+       @extend %btn-primary
+
+.title
+        @include text($fontMain, 46px, 60px, 700, $textColorHero)
+        text-transform: uppercase
+        opacity: 0.8
+
+.about
+    background-color: $sectionColorWhite
+    padding: 110px 0 125px 0 
+    .wrapper
+        margin-top: 75px
+    &__title
+        position: relative
+        width: 300px
+        margin: 0 0 15px 0
+        &::before
+            content: ""
+            display: block
+            height: 4px
+            width: 60px
+            background-color: $textColorHero
+            position: absolute
+            top: -10px
+            left: 3px
+
+
+    &__description
+        position: relative
+        top: -20px
+        @include text($fontMain, 16px, 26px, 400, $textColorHero)
+    .btn
+        @extend %btn
+    .btn-primary
+        @extend %btn-primary
+
+    
+.services
+    padding: 145px 0 115px 0
+    background-color: $sectionColorGrey
+    &__title
+        margin-bottom: 60px
+        position: relative
+        &::before
+            content: ""
+            display: block
+            height: 4px
+            width: 60px
+            background-color: $textColorHero
+            position: absolute
+            top: -10px
+            left: 50%
+            transform: translateX(-50%)
+    &__img
+        height: 80px
+        width: 77px
+        margin: 0 auto 16px auto
+        overflow: hidden
+        > img
+            height: 100%
+            width: 100%
+    &__description
+        width: 175px
+        margin: 0 auto 85px auto
+        @include text($fontMain, 24px, 24px, 500, $textColorHero)
+
+.skills 
+    padding: 140px 0 125px 0
+    background-color: $sectionColorWhite
+    &__img
+        max-width: 995px
+        margin: auto
+        overflow: hidden
+        > img
+            width: 100%
+    &__title
+        margin-bottom: 60px
+        position: relative
+        &::before
+            content: ""
+            display: block
+            height: 4px
+            width: 60px
+            background-color: $textColorHero
+            position: absolute
+            top: -10px
+            left: 50%
+            transform: translateX(-50%)
+       
+
+.portfolio
+    padding: 150px 0 120px 0
+    background-color: $sectionColorGrey
+    &__title
+        margin-bottom: 45px
+        position: relative
+        &::before
+            content: ""
+            display: block
+            height: 4px
+            width: 60px
+            background-color: $textColorHero
+            position: absolute
+            top: -10px
+            left: 50%
+            transform: translateX(-50%)
+    &__img
+        position: relative
+        display: block
+        max-width: 375px
+        margin-bottom: 30px
+        overflow: hidden
+        z-index: 1
+        filter: blur(1.5px)
+        transition: 0.5s
+
+        &:hover
+            cursor: pointer
+            filter: none
+            transform: scale(1.1)
+            box-shadow: 0px 0px 24px 1px rgba(0,0,0,0.75);
+            transition: 0.5s 
+            &::after
+                @include text($fontAwesome, 24px, 24px, 900, black)
+                position: absolute
+                content: '\f105'
+                top: 50%
+                left: 50%
+                transform: translate(-50%, -50%)
+                transition: 0.5s
+        > img 
+            width: 100%
+    .btn
+        @extend %btn
+    .btn-primary
+        @extend %btn-primary
+
+.testimonials
+    margin-bottom: 57px
+    padding: 150px 0 120px 0
+    background-color: $sectionColorWhite
+    &__title
+        margin-bottom: 45px
+        position: relative
+        &::before
+            content: ""
+            display: block
+            height: 4px
+            width: 60px
+            background-color: $textColorHero
+            position: absolute
+            top: -10px
+            left: 50%
+            transform: translateX(-50%)
+    .carusel__item
+        display: flex
+        justify-content: space-between
+    &__img
+        display: block
+        width: 160px
+        height: 160px
+        > img 
+            width: 100%
+    &__info
+        display: block
+        max-width: 570px
+        text-align: left
+    &__name
+        margin-bottom: 9px
+        @include text($fontMain, 30px, 30px, 500, #212121)
+        text-transform: uppercase
+    &__position
+        margin-bottom: 20px
+        @include text($fontMain, 12px, 12px, 400, #212121)  
+        font-style: italic
+        text-transform: uppercase
+    &__description
+        @include text($fontMain, 16px, 23px, 400, rgba(33, 33, 33, 0.6))
+        text-transform: uppercase
+    
+.advantages
+    padding: 52px 0 52px 0
+    background-color: $sectionColorGrey
+
+
+    
+
+
+
+
+            
+                
+            
