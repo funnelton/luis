@@ -199,6 +199,7 @@
 
 .about__img {
   max-width: 570px;
+  margin: auto;
 }
 
 .about__img > img {
@@ -239,21 +240,8 @@
           transform: translateX(-50%);
 }
 
-.services__img {
-  height: 80px;
-  width: 77px;
-  margin: 0 auto 16px auto;
-  overflow: hidden;
-}
-
-.services__img > img {
-  height: 100%;
-  width: 100%;
-}
-
 .services__description {
-  width: 175px;
-  margin: 0 auto 85px auto;
+  margin: 20px auto 85px auto;
   font-family: "Asap", sans-serif;
   font-size: 24px;
   line-height: 24px;
@@ -443,6 +431,27 @@
 
 .advantages {
   padding: 52px 0 52px 0;
+  margin-bottom: 155px;
   background-color: #f6f6f6;
+}
+
+.advantages__count {
+  margin-top: 30px;
+  font-family: "Asap", sans-serif;
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 500;
+  color: #212121;
+  opacity: 0.9;
+}
+
+.advantages__title {
+  font-family: "Asap", sans-serif;
+  font-size: 22px;
+  line-height: 22px;
+  font-weight: 400;
+  color: #212121;
+  opacity: 0.9;
+  text-transform: uppercase;
 }
 /*# sourceMappingURL=style.css.map */

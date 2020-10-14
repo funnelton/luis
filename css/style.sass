@@ -146,6 +146,7 @@ $sectionColorGrey: #f6f6f6
             left: 3px
     &__img
         max-width: 570px
+        margin: auto
         > img 
             width: 100%
             overflow: hidden
@@ -177,17 +178,8 @@ $sectionColorGrey: #f6f6f6
             top: -10px
             left: 50%
             transform: translateX(-50%)
-    &__img
-        height: 80px
-        width: 77px
-        margin: 0 auto 16px auto
-        overflow: hidden
-        > img
-            height: 100%
-            width: 100%
     &__description
-        width: 175px
-        margin: 0 auto 85px auto
+        margin: 20px auto 85px auto
         @include text($fontMain, 24px, 24px, 500, $textColorHero)
 
 .skills 
@@ -306,8 +298,16 @@ $sectionColorGrey: #f6f6f6
     
 .advantages
     padding: 52px 0 52px 0
+    margin-bottom: 155px
     background-color: $sectionColorGrey
-
+    &__count
+        margin-top: 30px
+        @include text($fontMain, 30px, 30px, 500, #212121)
+        opacity: 0.9
+    &__title
+        @include text($fontMain, 22px, 22px, 400, #212121)
+        opacity: 0.9
+        text-transform: uppercase
 
     
 

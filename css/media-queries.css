@@ -1,0 +1,104 @@
+@media only screen and (max-width: 1200px) {
+    .owl-carousel{
+        padding: 30px 45px
+    }
+
+    .carusel__item{
+        flex-direction: column;
+        align-items: center;
+    }
+    .testimonials__info{
+        text-align: center;
+    }
+    .owl-dots {
+        display: none;
+    }
+    .owl-nav {
+        display: block;
+    }
+    .owl-nav .owl-prev{
+        outline: none!important;
+        position: absolute;
+        display: block;
+        left: 1%;
+        top: 50%;
+        transform: translateY(-50%);
+        font-weight: 900!important;
+        font-family: "Font Awesome 5 Free"!important;
+      }
+      
+      .owl-nav .owl-prev:before {
+        font-size: 30px;
+        content: "\f100";
+    }
+      .owl-nav .owl-next{
+        outline: none!important;
+        position: absolute;
+        display: block;
+        right: 1%;
+        top: 50%;
+        transform: translateY(-50%);
+        font-weight: 900!important;
+        font-family: "Font Awesome 5 Free"!important;
+      }
+      .owl-nav .owl-next:before {
+        content: "\f101";
+        font-size: 30px;
+      }
+}
+@media only screen and (max-width: 992px) {
+    .about__img > img {
+        width: 100%;
+        margin-top: 100px;
+        overflow: hidden;
+      }
+}
+@media only screen and (max-width: 767px) {
+    .about .wrapper {
+        text-align: center;
+    }
+
+    .about__description {
+        padding-top: 50px;
+    }
+
+    .about__title,.about__description {
+        text-align: center;
+        margin: auto;
+        max-width: 570px;
+      }
+
+
+    .about__title::before {
+        content: "";
+        display: block;
+        height: 4px;
+        width: 60px;
+        background-color: #4d4d4d;
+        position: absolute;
+        top: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .about,.skills,.services,.portfolio,.testimonials {
+        padding: 20px 20px;
+    }
+    .testimonials {
+        padding: 20px 0;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+
+}
+
+@media only screen and (max-width: 375px) {
+
+}
+
+@media only screen and (max-width: 360px) {
+
+}
+@media only screen and (max-width: 320px) {
+
+}
