@@ -120,6 +120,14 @@
   background-color: black;
 }
 
+.form-control {
+  height: 57px;
+}
+
+textarea.form-control {
+  padding-top: 20px;
+}
+
 .hero {
   height: 100vh;
   background: url(../img/hero-bg_01.jpg) center center no-repeat;
@@ -308,7 +316,6 @@
 .portfolio__img {
   position: relative;
   display: block;
-  max-width: 375px;
   margin-bottom: 30px;
   overflow: hidden;
   z-index: 1;
@@ -453,5 +460,217 @@
   color: #212121;
   opacity: 0.9;
   text-transform: uppercase;
+}
+
+.contact {
+  padding: 170px 0 30px 0;
+  background: url(../img/contact_bg.jpg) center center no-repeat;
+  background-size: cover;
+}
+
+.contact__title {
+  margin-bottom: 70px;
+  color: white;
+}
+
+.contact__title::before {
+  content: "";
+  display: block;
+  height: 4px;
+  width: 60px;
+  background-color: white;
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.contact input {
+  margin-bottom: 30px;
+  border-radius: 0;
+  font-family: "Asap", sans-serif;
+  font-size: 16px;
+  line-height: 57px;
+  font-weight: 400;
+  color: #212121;
+}
+
+.contact input::-webkit-input-placeholder {
+  font-family: "Asap", sans-serif;
+  font-size: 16px;
+  line-height: 57px;
+  font-weight: 400;
+  color: rgba(33, 33, 33, 0.8);
+}
+
+.contact input:-ms-input-placeholder {
+  font-family: "Asap", sans-serif;
+  font-size: 16px;
+  line-height: 57px;
+  font-weight: 400;
+  color: rgba(33, 33, 33, 0.8);
+}
+
+.contact input::-ms-input-placeholder {
+  font-family: "Asap", sans-serif;
+  font-size: 16px;
+  line-height: 57px;
+  font-weight: 400;
+  color: rgba(33, 33, 33, 0.8);
+}
+
+.contact input::placeholder {
+  font-family: "Asap", sans-serif;
+  font-size: 16px;
+  line-height: 57px;
+  font-weight: 400;
+  color: rgba(33, 33, 33, 0.8);
+}
+
+.contact textarea {
+  margin-bottom: 30px;
+  border-radius: 0;
+  resize: none;
+  height: 200px;
+}
+
+.contact textarea::-webkit-input-placeholder {
+  font-family: "Asap", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(33, 33, 33, 0.8);
+}
+
+.contact textarea:-ms-input-placeholder {
+  font-family: "Asap", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(33, 33, 33, 0.8);
+}
+
+.contact textarea::-ms-input-placeholder {
+  font-family: "Asap", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(33, 33, 33, 0.8);
+}
+
+.contact textarea::placeholder {
+  font-family: "Asap", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(33, 33, 33, 0.8);
+}
+
+.contact .btn {
+  margin-bottom: 155px;
+  padding: 0 55px;
+  border-radius: 0;
+  position: relative;
+}
+
+.contact .btn::after {
+  content: '\f1d8';
+  position: absolute;
+  top: 50%;
+  right: 23%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-family: "Font Awesome 5 Free";
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 900;
+  color: #4d4d4d;
+}
+
+.contact .btn-primary {
+  font-family: "Asap", sans-serif;
+  font-size: 16px;
+  line-height: 50px;
+  font-weight: 500;
+  color: #4d4d4d;
+  border: 1px solid transparent;
+  background-color: white;
+  text-transform: uppercase;
+}
+
+.contact .btn-primary:hover {
+  background-color: #fff;
+  border: 1px solid #fff;
+  -webkit-box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.75);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.contact footer {
+  padding: 26px 0 0 0;
+  border-top: 1px solid white;
+}
+
+.contact footer ul li {
+  display: inline-block;
+  margin-right: 9px;
+}
+
+.contact footer ul li i {
+  text-align: center;
+  font-size: 15px;
+  line-height: 30px;
+  width: 30px;
+  color: #4d4d4d;
+  background-color: #fff;
+}
+
+.contact footer ul li i.fa-facebook-f:hover {
+  background-color: blue;
+  color: #fff;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.contact footer ul li i.fa-twitter:hover {
+  background-color: lightblue;
+  color: #fff;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.contact footer ul li i.fa-linkedin-in:hover {
+  background-color: blue;
+  color: #fff;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.contact footer ul li i.fa-google-plus-g:hover {
+  background-color: red;
+  color: #fff;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.contact footer ul li i.fa-behance:hover {
+  background-color: blue;
+  color: #fff;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.contact footer ul li i.fa-dribbble:hover {
+  background-color: pink;
+  color: #fff;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.contact footer p {
+  padding-top: 7px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+  color: white;
 }
 /*# sourceMappingURL=style.css.map */

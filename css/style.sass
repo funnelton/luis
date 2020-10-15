@@ -8,6 +8,7 @@
 
 $fontMain: 'Asap', sans-serif
 $fontAwesome: 'Font Awesome 5 Free'
+$fontFooter: 'Montserrat', sans-serif
 $textColorHero: #4d4d4d
 $sectionColorWhite: #fff
 $sectionColorGrey: #f6f6f6
@@ -94,6 +95,11 @@ $sectionColorGrey: #f6f6f6
             border: 1px solid black
             background-color: black
 
+.form-control
+    height: 57px
+
+textarea.form-control
+    padding-top: 20px
 
 .hero
     height: 100vh
@@ -225,7 +231,6 @@ $sectionColorGrey: #f6f6f6
     &__img
         position: relative
         display: block
-        max-width: 375px
         margin-bottom: 30px
         overflow: hidden
         z-index: 1
@@ -310,10 +315,106 @@ $sectionColorGrey: #f6f6f6
         text-transform: uppercase
 
     
+.contact
+    padding: 170px 0 30px 0 
+    background: url(../img/contact_bg.jpg) center center no-repeat
+    background-size: cover
+    &__title
+        margin-bottom: 70px
+        color: white
+        &::before
+            content: ""
+            display: block
+            height: 4px
+            width: 60px
+            background-color: white
+            position: absolute
+            top: -10px
+            left: 50%
+            transform: translateX(-50%)
+    input
+        margin-bottom: 30px
+        border-radius: 0
+        @include text($fontMain, 16px, 57px, 400, #212121)     
+        &::placeholder
+               @include text($fontMain, 16px, 57px, 400, rgba(33, 33, 33, 0.8))
+    textarea
+        margin-bottom: 30px
+        border-radius: 0
+        resize: none
+        height: 200px
+        &::placeholder
+            font-family: "Asap", sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            color: rgba(33, 33, 33, 0.8);
+    .btn
+        margin-bottom: 155px
+        padding: 0 55px 
+        border-radius: 0      
+        position: relative
+        &::after
+            content: '\f1d8'
+            position: absolute
+            top: 50%
+            right: 23%
+            transform: translateY(-50%)
+            @include text($fontAwesome, 14px, 16px, 900, $textColorHero)
 
-
-
-
-            
-                
-            
+    .btn-primary
+        @include text($fontMain, 16px, 50px, 500, $textColorHero)
+        border: 1px solid transparent
+        background-color: white
+        text-transform: uppercase
+        &:hover
+            background-color: #fff
+            border: 1px solid #fff
+            box-shadow: 0px 0px 20px -5px rgba(0,0,0,0.75);
+            transition: 0.5s
+    footer
+        padding: 26px 0 0 0 
+        border-top: 1px solid white
+        ul 
+            li 
+                display: inline-block
+                margin-right: 9px
+                i 
+                    text-align: center
+                    font-size: 15px;
+                    line-height: 30px
+                    width: 30px
+                    color: #4d4d4d
+                    background-color: #fff
+                    &.fa-facebook-f
+                        &:hover
+                            background-color: blue
+                            color: #fff
+                            transition: 0.5s
+                    &.fa-twitter
+                            &:hover
+                                background-color: lightblue
+                                color: #fff
+                                transition: 0.5s
+                    &.fa-linkedin-in
+                            &:hover
+                                background-color: blue
+                                color: #fff
+                                transition: 0.5s    
+                    &.fa-google-plus-g
+                            &:hover
+                                background-color: red
+                                color: #fff
+                                transition: 0.5s 
+                    &.fa-behance
+                        &:hover
+                            background-color: blue
+                            color: #fff
+                            transition: 0.5s    
+                    &.fa-dribbble
+                        &:hover
+                            background-color: pink
+                            color: #fff
+                            transition: 0.5s    
+        p
+            padding-top: 7px 
+            @include text($fontFooter, 16px, 16px, 400, white)
