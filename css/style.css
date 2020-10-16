@@ -612,6 +612,7 @@ textarea.form-control {
 .contact footer ul li {
   display: inline-block;
   margin-right: 9px;
+  margin-bottom: 9px;
 }
 
 .contact footer ul li i {
