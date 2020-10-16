@@ -38,6 +38,7 @@
 
 .navbar-default .navbar-toggle {
   border: none;
+  top: 30px;
 }
 
 .navbar-default .navbar-toggle:hover {
@@ -136,8 +137,7 @@ textarea.form-control {
 }
 
 .hero .wrapper {
-  position: absolute;
-  top: 25vh;
+  margin-top: 50%;
 }
 
 .hero__title {
