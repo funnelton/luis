@@ -54,8 +54,19 @@
       }
 }
 @media only screen and (max-width: 767px) {
-    .about .wrapper {
+    .nav.navbar-nav.navbar-right {
+        width: 90%;
+        margin: 50px auto ;
         text-align: center;
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+
+    .about .wrapper {
+        margin: 0;
+        text-align: center;
+    }
+    .about__title {
+        margin: 20px auto 0 auto;
     }
 
     .about__description {
@@ -64,10 +75,12 @@
 
     .about__title,.about__description {
         text-align: center;
-        margin: auto;
         max-width: 570px;
       }
 
+    .about__img > img {
+        margin-top: 20px;
+    }
 
     .about__title::before {
         content: "";
@@ -83,13 +96,25 @@
     .about,.skills,.services,.portfolio,.testimonials {
         padding: 20px 20px;
     }
+    .portfolio__img{
+        filter: none;
+    }
     .testimonials {
         padding: 20px 0;
+        margin-bottom: 0;
     }
-    footer {
+    .advantages {
+        margin-bottom: 0;
+        padding: 20px 0;
+    }
+    .contact {
         text-align: center;
+        padding: 20px 20px ;    
     }
-}
+    .contact__title {
+        margin: 20px auto 20px auto;
+    }
+}   
 
 @media only screen and (max-width: 400px) {
     .hero__title {

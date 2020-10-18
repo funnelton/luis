@@ -34,6 +34,8 @@ $sectionColorGrey: #f6f6f6
         border: 1px solid #fff
         box-shadow: 0px 0px 20px -5px rgba(0,0,0,0.75);
         transition: 0.5s
+    &:focus
+        outline: none
 
 .navbar-default
     background-color: transparent
@@ -69,6 +71,15 @@ $sectionColorGrey: #f6f6f6
                     width: 100%
                     transition: 0.5s
 
+.well
+    padding: 0
+    border: none
+    background-image: none
+    box-shadow: none
+    margin: 0
+
+button
+    border: none    
 .owl-carousel
     padding: 80px 75px 110px 120px
     border: 1px solid #253142
@@ -108,7 +119,7 @@ textarea.form-control
     background-size: 100% 100%
     position: relative
     .wrapper
-        margin-top: 50%
+        margin-top: 35vh
     &__title
         @include text($fontMain, 90px, 90px, 500, $textColorHero)
         margin: 0
@@ -316,6 +327,7 @@ textarea.form-control
 
     
 .contact
+    position: relative
     padding: 170px 0 30px 0 
     background: url(../img/contact_bg.jpg) center center no-repeat
     background-size: cover
@@ -371,6 +383,41 @@ textarea.form-control
             border: 1px solid #fff
             box-shadow: 0px 0px 20px -5px rgba(0,0,0,0.75);
             transition: 0.5s
+    @keyframes button-top
+        0%
+            width: 45px
+            line-height: 45px
+            font-size: 40px
+        25%
+            width: 55px
+            line-height: 55px
+            font-size: 50px
+        50%
+            width: 45px
+            line-height: 45px
+            font-size: 40px
+        75%
+            width: 55px
+            line-height: 55px
+            font-size: 50px
+        100%
+            width: 45px
+            line-height: 45px
+            font-size: 40px
+            
+    &__button-top
+        display: inline-block
+        width: 60px
+        position: absolute
+        bottom: 20%
+        right: 10%
+        text-align: center
+        font-size: 25px
+        line-height: 60px
+        color: #4d4d4d
+        background-color: white
+        animation: button-top 3s infinite linear
+        
     footer
         padding: 26px 0 0 0 
         border-top: 1px solid white
