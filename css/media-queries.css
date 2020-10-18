@@ -45,6 +45,11 @@
         content: "\f101";
         font-size: 30px;
       }
+      .contact footer ul li {
+        display: inline-block;
+        margin-right: 8px;
+        margin-bottom: 9px;
+      }
 }
 @media only screen and (max-width: 992px) {
     .about__img > img {
@@ -137,4 +142,6 @@
     .about__title {
         max-width: 250px;
     }
+}
+@media only screen and (max-width: 320px) {
 }
