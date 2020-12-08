@@ -1,0 +1,655 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,400;0,500;0,700;1,400&family=Montserrat&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+$fontMain: 'Asap', sans-serif;
+$fontAwesome: 'Font Awesome 5 Free';
+$fontFooter: 'Montserrat', sans-serif;
+$textColorHero: #4d4d4d;
+$sectionColorWhite: #fff;
+$sectionColorGrey: #f6f6f6;
+
+@mixin text($font, $fsz, $lh, $fw, $color) {
+  font-family: $font;
+  font-size: $fsz;
+  line-height: $lh;
+  font-weight: $fw;
+  color: $color;
+}
+
+%btn {
+  padding: 0 55px;
+  border-radius: 0;       
+}
+
+%btn-primary {
+  @include text($fontMain, 16px, 50px, 500, $textColorHero);
+  border: 1px solid $textColorHero;
+  background-color: transparent;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: #fff;
+    border: 1px solid #fff;
+    box-shadow: 0px 0px 20px -5px rgba(0,0,0,0.75);
+    transition: 0.5s;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.navbar-default {
+  background-color: transparent;
+  border: none;
+
+  .navbar-toggle {
+    border: none;
+    top: 30px;
+    
+    &:hover {
+      background-color: transparent;
+    }
+  }
+}
+
+.navbar-collapse {
+  border: none;
+}
+
+.navbar-brand {
+  padding-top: 30px;
+}
+
+.nav.navbar-nav.navbar-right {
+  li {
+
+    a {
+      padding-top: 30px;
+      @include text($fontMain, 16px, 16px, 400, $textColorHero);
+      text-transform: uppercase;
+
+      &::after {
+        content: "";
+        margin-top: 8px;
+        display: block;
+        width: 0%;
+        height: 2px;
+        background-color: #878787;
+      }
+
+      &:hover {
+
+        &::after {
+          width: 100%;
+          transition: 0.5s;
+        }
+      }
+    }
+  }
+}
+
+.well {
+  padding: 0;
+  border: none;
+  background-image: none;
+  box-shadow: none;
+  margin: 0;
+}
+
+button {
+  border: none;
+}  
+
+.owl-carousel {
+  padding: 80px 75px 110px 120px;
+  border: 1px solid #253142;
+}
+
+.owl-nav {
+  display: none;
+}
+
+.owl-dots {
+  position: absolute;
+  bottom: 37px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-self: center;
+  justify-content: space-between;
+
+  .owl-dot {
+    outline: none!important;
+
+    span {
+      display: inline-block;
+      margin-right: 4px;
+      height: 13px;
+      width: 13px;
+      background-color: transparent;
+      border: 1px solid #253142;
+    }
+  }
+
+  .owl-dot.active {
+
+    span {
+      border: 1px solid black;
+      background-color: black;
+    }
+  }
+}
+
+.form-control {
+  height: 57px;
+}
+
+textarea.form-control {
+  padding-top: 20px;
+}
+
+.hero {
+  height: 100vh;
+  background: url(../img/hero-bg_01.jpg) center center  no-repeat;
+  background-size: 100% 100%;
+  position: relative;
+
+  .wrapper {
+    margin-top: 35vh;
+  }
+
+  &__title {
+    @include text($fontMain, 90px, 90px, 500, $textColorHero);
+    margin: 0;
+  }
+
+  &__description {
+    margin: 0 0 30px 0;
+    padding-left: 5px;
+    @include text($fontMain, 22px, 22px, 500, $textColorHero);
+    opacity: 0.15;
+  }
+
+  .btn {
+    @extend %btn;   
+  }    
+
+  .btn-primary {
+    @extend %btn-primary;
+  }
+
+  &__img {
+    max-width: 575px;
+
+    > img {
+      width: 100%;
+      overflow: hidden;
+    }
+  }
+}
+
+.title {
+  @include text($fontMain, 46px, 60px, 700, $textColorHero);
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+.about {
+  background-color: $sectionColorWhite;
+  padding: 110px 0 125px 0 ;
+
+  .wrapper {
+    margin-top: 75px;
+  }
+
+  &__title {
+    position: relative;
+    width: 300px;
+    margin: 0 0 15px 0;
+
+    &::before {
+      content: "";
+      display: block;
+      height: 4px;
+      width: 60px;
+      background-color: $textColorHero;
+      position: absolute;
+      top: -10px;
+      left: 3px;
+    }
+  }
+
+  &__img {
+    max-width: 570px;
+    margin: auto;
+
+    > img {
+      width: 100%;
+      overflow: hidden;
+    }
+  }
+
+  &__description {
+    position: relative;
+    top: -20px;
+    @include text($fontMain, 16px, 26px, 400, $textColorHero);
+  }
+
+  .btn {
+    @extend %btn;
+  }
+
+  .btn-primary {
+    @extend %btn-primary;
+  }
+}
+
+    
+.services {
+  padding: 145px 0 115px 0;
+  background-color: $sectionColorGrey;
+  &__title {
+      margin-bottom: 60px;
+      position: relative;
+      &::before {
+          content: "";
+          display: block;
+          height: 4px;
+          width: 60px;
+          background-color: $textColorHero;
+          position: absolute;
+          top: -10px;
+          left: 50%;
+          transform: translateX(-50%);
+      }
+  }
+  &__description {
+      margin: 20px auto 85px auto;
+      @include text($fontMain, 24px, 24px, 500, $textColorHero);
+  }
+}
+
+.skills {
+  padding: 140px 0 125px 0;
+  background-color: $sectionColorWhite;
+
+  &__img{
+    max-width: 995px;
+    margin: auto;
+    overflow: hidden;
+
+    > img {
+      width: 100%;
+    }
+  }
+
+  &__title {
+    margin-bottom: 60px;
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      height: 4px;
+      width: 60px;
+      background-color: $textColorHero;
+      position: absolute;
+      top: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+       
+
+.portfolio {
+  padding: 150px 0 120px 0;
+  background-color: $sectionColorGrey;
+
+  &__title {
+    margin-bottom: 45px;
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      height: 4px;
+      width: 60px;
+      background-color: $textColorHero;
+      position: absolute;
+      top: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__img {
+    position: relative;
+    display: block;
+    margin-bottom: 30px;
+    overflow: hidden;
+    z-index: 1;
+    filter: blur(1.5px);
+    transition: 0.5s;
+
+      &:hover {
+        cursor: pointer;
+        filter: none;
+        transform: scale(1.1);
+        box-shadow: 0px 0px 24px 1px rgba(0,0,0,0.75);
+        transition: 0.5s ;
+
+        &::after {
+          @include text($fontAwesome, 24px, 24px, 900, black);
+          position: absolute;
+          content: '\f105';
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          transition: 0.5s;
+        }    
+      }
+
+      > img {
+        width: 100%;
+      }
+  }
+
+  .btn {
+    @extend %btn;
+  }
+
+  .btn-primary {
+    @extend %btn-primary;
+  }
+}
+
+.testimonials {
+  margin-bottom: 57px;
+  padding: 150px 0 120px 0;
+  background-color: $sectionColorWhite;
+
+  &__title {
+    margin-bottom: 45px;
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      height: 4px;
+      width: 60px;
+      background-color: $textColorHero;
+      position: absolute;
+      top: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }   
+
+  .carusel__item {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__img {
+    display: block;
+    width: 160px;
+    height: 160px;
+
+    > img {
+        width: 100%;
+    }
+  }
+
+  &__info {
+    display: block;
+    max-width: 570px;
+    text-align: left;
+  }
+
+  &__name {
+    margin-bottom: 9px;
+    @include text($fontMain, 30px, 30px, 500, #212121);
+    text-transform: uppercase;
+  }
+
+  &__position {
+    margin-bottom: 20px;
+    @include text($fontMain, 12px, 12px, 400, #212121);
+    font-style: italic;
+    text-transform: uppercase;
+  }
+
+  &__description {
+    @include text($fontMain, 16px, 23px, 400, rgba(33, 33, 33, 0.6));
+    text-transform: uppercase;
+  }
+}
+    
+.advantages {
+  padding: 52px 0 52px 0;
+  margin-bottom: 155px;
+  background-color: $sectionColorGrey;
+
+  &__count {
+    margin-top: 30px;
+    @include text($fontMain, 30px, 30px, 500, #212121);
+    opacity: 0.9;
+  }
+
+  &__title {
+    @include text($fontMain, 22px, 22px, 400, #212121);
+    opacity: 0.9;
+    text-transform: uppercase;
+  }
+}
+
+    
+.contact {
+  position: relative;
+  padding: 170px 0 30px 0 ;
+  background: url(../img/contact_bg.jpg) center center no-repeat;
+  background-size: cover;
+
+  &__title {
+    margin-bottom: 70px;
+    color: white;
+
+    &::before {
+      content: "";
+      display: block;
+      height: 4px;
+      width: 60px;
+      background-color: white;
+      position: absolute;
+      top: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  input {
+    margin-bottom: 30px;
+    border-radius: 0;
+    @include text($fontMain, 16px, 57px, 400, #212121);
+
+    &::placeholder {
+      @include text($fontMain, 16px, 57px, 400, rgba(33, 33, 33, 0.8));
+    }
+  }
+
+  textarea {
+    margin-bottom: 30px;
+    border-radius: 0;
+    resize: none;
+    height: 200px;
+
+    &::placeholder {
+      font-family: "Asap", sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      color: rgba(33, 33, 33, 0.8);
+    }
+  }
+
+  .btn {
+    margin-bottom: 155px;
+    padding: 0 55px;
+    border-radius: 0;
+    position: relative;
+
+    &::after {
+      content: '\f1d8';
+      position: absolute;
+      top: 50%;
+      right: 23%;
+      transform: translateY(-50%);
+      @include text($fontAwesome, 14px, 16px, 900, $textColorHero);
+    }
+  }
+
+  .btn-primary {
+    @include text($fontMain, 16px, 50px, 500, $textColorHero);
+    border: 1px solid transparent;
+    background-color: white;
+    text-transform: uppercase;
+
+    &:hover {
+      background-color: #fff;
+      border: 1px solid #fff;
+      box-shadow: 0px 0px 20px -5px rgba(0,0,0,0.75);
+      transition: 0.5s;
+    }
+  }
+          
+  &__button-top {
+    display: inline-block;
+    width: 60px;
+    position: absolute;
+    bottom: 20%;
+    right: 10%;
+    text-align: center;
+    font-size: 25px;
+    line-height: 60px;
+    color: #4d4d4d;
+    background-color: white;
+    animation: button-top 3s infinite linear;
+  }
+
+  footer {
+    padding: 26px 0 0 0 ;
+    border-top: 1px solid white;
+
+    ul {
+
+      li {
+        display: inline-block;
+        margin-right: 9px;
+        margin-bottom: 9px;
+
+        i {
+          text-align: center;
+          font-size: 15px;
+          line-height: 30px;
+          width: 30px;
+          color: #4d4d4d;
+          background-color: #fff;
+
+          &.fa-facebook-f {
+
+            &:hover {
+              background-color: blue;
+              color: #fff;
+              transition: 0.5s;
+            }
+          }
+
+          &.fa-twitter {
+
+            &:hover {
+              background-color: lightblue;
+              color: #fff;
+              transition: 0.5s;
+            }
+          }
+
+          &.fa-linkedin-in {
+
+            &:hover {
+              background-color: blue;
+              color: #fff;
+              transition: 0.5s;
+            }
+          }
+
+          &.fa-google-plus-g {
+
+            &:hover {
+              background-color: red;
+              color: #fff;
+              transition: 0.5s;
+            }
+          }
+          &.fa-behance {
+
+            &:hover {
+              background-color: blue;
+              color: #fff;
+              transition: 0.5s;
+            }
+          }
+
+          &.fa-dribbble {
+
+            &:hover {
+              background-color: pink;
+              color: #fff;
+              transition: 0.5s;
+            }
+          }
+        }
+      }
+    }
+
+    p {
+      padding-top: 7px;
+      @include text($fontFooter, 16px, 16px, 400, white);
+    } 
+  }
+}
+
+@keyframes button-top {
+  0% {
+    width: 45px;
+    line-height: 45px;
+    font-size: 40px;
+  }
+  25% {
+    width: 55px;
+    line-height: 55px;
+    font-size: 50px;
+  }
+  50% {
+    width: 45px;
+    line-height: 45px;
+    font-size: 40px;
+  }
+  75% {
+    width: 55px;
+    line-height: 55px;
+    font-size: 50px;
+  }
+  100% {
+    width: 45px;
+    line-height: 45px;
+    font-size: 40px;
+  }
+}
+        
